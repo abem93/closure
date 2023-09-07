@@ -51,17 +51,17 @@ function makeAdder(num1){
 console.log(makeAdder(2)(3)); //5
 console.log(makeAdder(3)(6)); //9
 
-// // #3 ID Generator
+// #3 ID Generator
 
-// function idGenerator(){
-//   let idAlpha = "AZ";
-//   let idNum = 0;
-//   return function (){
-//     ++idNum;
-//     return (idAlpha + idNum);
-//   }
-// }
-// const generateId = idGenerator();
-// console.log(generateId());
-// console.log(generateId());
-// console.log(generateId());
+function idGenerator(){
+  let idAlpha = "AZ";
+  let idNum = 0;
+  return function (){
+    ++idNum;
+    return (idAlpha + idNum);
+  }
+}
+const generateId = idGenerator();
+console.log(generateId());
+console.log(generateId());
+console.log(generateId());
